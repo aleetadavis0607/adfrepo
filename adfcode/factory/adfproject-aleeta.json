@@ -1,0 +1,15 @@
+{
+	"name": "adfproject-aleeta",
+	"properties": {
+		"trustModeClaimForMi": {
+			"value": "Disabled",
+			"editable": true
+		}
+	},
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "2e936542-d11b-44c7-bd6b-ad7562f1f5a5",
+		"tenantId": "33784ab0-07fe-4aea-913a-4f640dc5822e"
+	}
+}
