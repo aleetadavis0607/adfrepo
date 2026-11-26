@@ -80,8 +80,8 @@
 			}
 		],
 		"typeProperties": {
-			"schema": "HumanResources",
-			"table": "JobCandidate"
+			"schema": "Sales",
+			"table": "Customer"
 		}
 	}
 }
