@@ -80,8 +80,8 @@
 			}
 		],
 		"typeProperties": {
-			"schema": "Sales",
-			"table": "SpecialOffer"
+			"schema": "Person",
+			"table": "Password"
 		}
 	}
 }
