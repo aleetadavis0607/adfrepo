@@ -80,8 +80,8 @@
 			}
 		],
 		"typeProperties": {
-			"schema": "Sales",
-			"table": "SalesTaxRate"
+			"schema": "HumanResources",
+			"table": "JobCandidate"
 		}
 	}
 }
