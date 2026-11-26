@@ -80,8 +80,8 @@
 			}
 		],
 		"typeProperties": {
-			"schema": "Person",
-			"table": "Password"
+			"schema": "Sales",
+			"table": "Customer"
 		}
 	}
 }
