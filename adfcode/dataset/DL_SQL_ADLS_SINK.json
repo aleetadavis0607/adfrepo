@@ -1,0 +1,19 @@
+{
+	"name": "DL_SQL_ADLS_SINK",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "DL_SQL_ADLS_SINK",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileSystem": "sqloutput"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": []
+	}
+}
