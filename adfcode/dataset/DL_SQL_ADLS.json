@@ -81,7 +81,7 @@
 		],
 		"typeProperties": {
 			"schema": "Sales",
-			"table": "SalesPerson"
+			"table": "SalesTaxRate"
 		}
 	}
 }
