@@ -329,7 +329,7 @@
 				],
 				"typeProperties": {
 					"schema": "Sales",
-					"table": "CreditCard"
+					"table": "SalesTerritory"
 				}
 			},
 			"dependsOn": [
