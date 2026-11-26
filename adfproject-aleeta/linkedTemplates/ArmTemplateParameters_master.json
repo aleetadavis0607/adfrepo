@@ -1,0 +1,33 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "adfproject-aleeta"
+		},
+		"DL_SQL_ADLS_password": {
+			"value": ""
+		},
+		"DL_SQL_ADLS_SINK_accountKey": {
+			"value": ""
+		},
+		"DL_SQL_ADLS_properties_typeProperties_server": {
+			"value": "localhost\\SQLEXPRESS"
+		},
+		"DL_SQL_ADLS_properties_typeProperties_database": {
+			"value": "AdventureWorks2025"
+		},
+		"DL_SQL_ADLS_properties_typeProperties_userName": {
+			"value": "adfuser"
+		},
+		"DL_SQL_ADLS_SINK_properties_typeProperties_url": {
+			"value": "https://adlsdevsinkproject007.dfs.core.windows.net/"
+		},
+		"containerUri": {
+			"value": ""
+		},
+		"containerSasToken": {
+			"value": ""
+		}
+	}
+}

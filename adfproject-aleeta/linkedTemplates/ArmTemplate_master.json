@@ -1,0 +1,84 @@
+{
+	"$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"type": "string",
+			"metadata": "Data Factory name",
+			"defaultValue": "adfproject-aleeta"
+		},
+		"DL_SQL_ADLS_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'DL_SQL_ADLS'"
+		},
+		"DL_SQL_ADLS_SINK_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'DL_SQL_ADLS_SINK'"
+		},
+		"DL_SQL_ADLS_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "localhost\\SQLEXPRESS"
+		},
+		"DL_SQL_ADLS_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "AdventureWorks2025"
+		},
+		"DL_SQL_ADLS_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "adfuser"
+		},
+		"DL_SQL_ADLS_SINK_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://adlsdevsinkproject007.dfs.core.windows.net/"
+		},
+		"containerUri": {
+			"type": "string",
+			"metadata": "URI to storage account containing linked ARM templates"
+		},
+		"containerSasToken": {
+			"type": "string",
+			"metadata": "Sas token to storage account containing linked ARM templates"
+		}
+	},
+	"variables": {
+		"factoryId": "[concat('Microsoft.DataFactory/factories/', parameters('factoryName'))]"
+	},
+	"resources": [
+		{
+			"name": "adfproject-aleeta_ArmTemplate_0",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2024-03-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_0.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					},
+					"DL_SQL_ADLS_SINK_accountKey": {
+						"value": "[parameters('DL_SQL_ADLS_SINK_accountKey')]"
+					},
+					"DL_SQL_ADLS_password": {
+						"value": "[parameters('DL_SQL_ADLS_password')]"
+					},
+					"DL_SQL_ADLS_SINK_properties_typeProperties_url": {
+						"value": "[parameters('DL_SQL_ADLS_SINK_properties_typeProperties_url')]"
+					},
+					"DL_SQL_ADLS_properties_typeProperties_server": {
+						"value": "[parameters('DL_SQL_ADLS_properties_typeProperties_server')]"
+					},
+					"DL_SQL_ADLS_properties_typeProperties_database": {
+						"value": "[parameters('DL_SQL_ADLS_properties_typeProperties_database')]"
+					},
+					"DL_SQL_ADLS_properties_typeProperties_userName": {
+						"value": "[parameters('DL_SQL_ADLS_properties_typeProperties_userName')]"
+					}
+				}
+			},
+			"dependsOn": []
+		}
+	]
+}
