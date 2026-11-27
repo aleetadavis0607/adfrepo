@@ -31,7 +31,7 @@
 		],
 		"typeProperties": {
 			"schema": "HumanResources",
-			"table": "EmployeePayHistory"
+			"table": "vEmployee"
 		}
 	}
 }
