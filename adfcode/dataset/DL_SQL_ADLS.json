@@ -30,8 +30,8 @@
 			}
 		],
 		"typeProperties": {
-			"schema": "Sales",
-			"table": "SalesTerritory"
+			"schema": "HumanResources",
+			"table": "EmployeePayHistory"
 		}
 	}
 }
